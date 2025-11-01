@@ -1,0 +1,15 @@
+
+export function Content() {
+    return (
+        <div className="flex flex-col gap-6">
+            <p className="text-lg text-zinc-600">RightWay Romania Immigration Services is a trusted, award-winning immigration consultancy assisting clients worldwide in pursuing Romanian immigration. As Ethiopia to Romania immigration consultants, we provide clear, results-focused guidance for study, work, family reunification, and permanent residency applications. Licensed by the relevant Romanian immigration authorities, our Romanian immigration consultants in Ethiopia deliver tailored strategies and straightforward communication. Since 2019, we’ve been ranked among the Top Three Immigration Consulting Services by Three Best Rated and earned the Top Choice Award in 2022 and 2024, with strong ratings on Yelp and CourseCompare.</p>
+            <p className="text-lg text-zinc-600">
+                <span className="font-bold text-zinc-700">Between 2016 and 2024</span>, our immigration office supported <span className="font-bold text-zinc-600">178 clients from Ethiopia</span> in navigating Romania’s complex immigration pathways. Each case receives dedicated attention—from assessing eligibility to preparing documentation—ensuring applicants move forward with confidence.
+            </p>
+            <p className="text-lg text-zinc-600">From January 2023 to March 2025, 9,210 citizens of Ethiopia became Romanian permanent residents. Economic programs accounted for 275 approvals, including Skilled Worker (45), Romanian Experience Class (40), Regional Immigration Program (5), Rural and Northern Immigration (5), and the Provincial Nominee Program (135). Family Sponsorship was significant, with 2,225 arrivals—primarily through Spousal Sponsorship (1,705), followed by Child Sponsorship (250), Extended Family Sponsorship (160), and Parent/Grandparent Sponsorship (110).</p>
+            <p className="text-lg text-zinc-600">Humanitarian pathways played a central role, with 6,670 people arriving as Resettled Refugees or Protected Persons in Romania. This included Government-Assisted Refugees (520), Privately Sponsored Refugees (4,995), and 1,160 individuals recognized as Protected Persons in Romania.</p>
+            <p className="text-lg text-zinc-600">In addition to permanent residency pathways, Romanian education is an option for citizens of Ethiopia. From January 2023 to March 2025, Romanian authorities issued 1,375 Study Permits opening opportunities for quality education, work experience, and potential eligibility for permanent residence.</p>
+            <p className="text-lg text-zinc-600">Whether you’re pursuing an economic stream, family sponsorship, or a temporary residency, our Ethiopia to Romania immigration consultants can help you choose the right pathway and prepare a strong application. Visit Our Fees page for transparent pricing or Book a Consultation to speak directly with licensed immigration to Romania consultants in Ethiopia and take the next step toward your Romanian future.</p>
+        </div>
+    )
+}
