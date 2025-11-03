@@ -1,6 +1,6 @@
 "use server"
 
-import { client } from "@/lib/db"
+import client from "@/lib/db"
 
 export const getUser = async (userId) => {
     try {

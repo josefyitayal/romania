@@ -44,23 +44,38 @@ const links = [
 
 export function Footer() {
     return (
-        <div className="p-10 w-full flex flex-col items-center gap-10">
-            <h2 className="text-4xl font-bold">Connect with us on Social Media</h2>
-            <div className="w-full flex items-center justify-center gap-5">
+        <div className="p-6 md:p-10 w-full flex flex-col items-center gap-8 md:gap-10">
+            {/* Heading */}
+            <h2 className="text-2xl md:text-4xl font-bold text-center">
+                Connect with us on Social Media
+            </h2>
+
+            {/* Social Media Icons */}
+            <div className="w-full flex flex-wrap justify-center gap-4 md:gap-6">
                 {SocialMedias.map((item) => (
                     <Link key={item.id} href={item.link}>
-                        <img src={item.icon} className="size-16 bg-blue-500 p-2 rounded-md" />
+                        <img
+                            src={item.icon}
+                            alt={item.id}
+                            className="h-12 w-12 md:h-16 md:w-16 bg-blue-500 p-2 rounded-md"
+                        />
                     </Link>
                 ))}
             </div>
-            <div className="flex items-center gap-5">
+
+            {/* Footer Links */}
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm md:text-base">
                 {links.map((link) => (
-                    <Link key={link.id} href={link.link} >
+                    <Link key={link.id} href={link.link} className="hover:underline">
                         {link.label}
                     </Link>
                 ))}
             </div>
-            <p className="text-center text-lg font-bold">© Copyright 2025 RightWayRomania.com. All Rights Reserved.</p>
+
+            {/* Copyright */}
+            <p className="text-center text-sm md:text-lg font-bold">
+                © Copyright 2025 RightWayRomania.com. All Rights Reserved.
+            </p>
         </div>
     )
 }

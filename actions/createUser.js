@@ -1,7 +1,7 @@
 
 "use server";
 
-import { client } from "@/lib/db";
+import client from "@/lib/db";
 import { BookConsSchema } from "@/schema/BookConsSchema";
 import otpGenerator from 'otp-generator';
 
