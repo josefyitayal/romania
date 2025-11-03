@@ -1,9 +1,9 @@
-
 "use server";
 
-import client from "@/lib/db";
+import { db } from "@/db/drizzle";
+import { bookCons } from "@/db/schema";   // your Drizzle schema
 import { BookConsSchema } from "@/schema/BookConsSchema";
-import otpGenerator from 'otp-generator';
+import otpGenerator from "otp-generator";
 
 export const createUser = async (data) => {
     try {
@@ -13,19 +13,20 @@ export const createUser = async (data) => {
         const otp = otpGenerator.generate(6, {
             upperCaseAlphabets: false,
             specialChars: false,
-            lowerCaseAlphabets: false
+            lowerCaseAlphabets: false,
         });
 
-        // ✅ Create new record in Prisma
-        const user = await client.bookCons.create({
-            data: {
+        // ✅ Insert new record with Drizzle
+        const [user] = await db
+            .insert(bookCons)
+            .values({
                 otpCode: otp,
                 photo: parsed.photo,
                 name: parsed.name,
                 fatherName: parsed.fatherName,
                 grandFatherName: parsed.grandFatherName,
                 gender: parsed.gender,
-                dateOfBirth: parsed.dateOfBirth, // already a Date if using z.date()
+                dateOfBirth: parsed.dateOfBirth,
                 placeOfBirth: parsed.placeOfBirth,
                 height: parsed.height,
                 eyeColor: parsed.eyeColor,
@@ -42,8 +43,12 @@ export const createUser = async (data) => {
                 houseNo: parsed.houseNo,
                 poBox: parsed.poBox ?? null,
                 email: parsed.email,
-            },
-        });
+            })
+            .returning({
+                id: bookCons.id,
+                otpCode: bookCons.otpCode,
+                otpCodeCreatedAt: bookCons.otpCodeCreatedAt,
+            });
 
         return {
             errors: null,
@@ -53,7 +58,7 @@ export const createUser = async (data) => {
         console.error(error);
 
         // Handle Zod validation errors separately
-        if (error instanceof Error && "issues" in error) {
+        if (error?.issues) {
             return {
                 errors: error,
                 data: null,

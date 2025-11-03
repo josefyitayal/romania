@@ -647,7 +647,7 @@ export function ApplicantForm() {
                             <Button
                                 type="submit"
                                 className="bg-blue-900 hover:bg-blue-800 text-white px-8 py-3 text-lg font-semibold"
-                                isabled={form.formState.isSubmitting}
+                                disabled={form.formState.isSubmitting}
                             >
                                 {form.formState.isSubmitting ? "Submitting..." : "Submit Application"}
                             </Button>
