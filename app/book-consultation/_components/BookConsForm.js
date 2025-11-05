@@ -322,12 +322,18 @@ export function ApplicantForm() {
                                         name="eyeColor"
                                         control={form.control}
                                         render={({ field }) => (
-                                            <Input
-                                                {...field}
-                                                id="eyeColor"
-                                                placeholder="Enter eye color"
-                                                className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
-                                            />
+                                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                                <SelectTrigger className="border-gray-300 focus:border-blue-500 focus:ring-blue-500">
+                                                    <SelectValue placeholder="Select Eye color" />
+                                                </SelectTrigger>
+                                                <SelectContent>
+                                                    <SelectItem value="black">Black</SelectItem>
+                                                    <SelectItem value="brown">Brown</SelectItem>
+                                                    <SelectItem value="blue">Blue</SelectItem>
+                                                    <SelectItem value="hazel">Hazel</SelectItem>
+                                                    <SelectItem value="green">Green</SelectItem>
+                                                </SelectContent>
+                                            </Select>
                                         )}
                                     />
                                     {form.formState.errors.eyeColor && (
@@ -343,12 +349,18 @@ export function ApplicantForm() {
                                         name="hairColor"
                                         control={form.control}
                                         render={({ field }) => (
-                                            <Input
-                                                {...field}
-                                                id="hairColor"
-                                                placeholder="Enter hair color"
-                                                className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
-                                            />
+                                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                                <SelectTrigger className="border-gray-300 focus:border-blue-500 focus:ring-blue-500">
+                                                    <SelectValue placeholder="Select Hair color" />
+                                                </SelectTrigger>
+                                                <SelectContent>
+                                                    <SelectItem value="black">Black</SelectItem>
+                                                    <SelectItem value="auburn">Auburn</SelectItem>
+                                                    <SelectItem value="blonde">Blonde</SelectItem>
+                                                    <SelectItem value="brunette">Brunette</SelectItem>
+                                                    <SelectItem value="ash">Ash</SelectItem>
+                                                </SelectContent>
+                                            </Select>
                                         )}
                                     />
                                     {form.formState.errors.hairColor && (
