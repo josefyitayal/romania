@@ -12,7 +12,7 @@ const items = [
         id: 2,
         icon: Phone,
         title: "Phone Numbers",
-        content: ["Local: +1 (647) 494-7977", "Toll Free: +1 (877) 494-7977"]
+        content: ["Local: +40 21 5197305", "Toll Free: +40 21 7208347"]
     }
 ]
 

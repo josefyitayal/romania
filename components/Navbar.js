@@ -15,7 +15,7 @@ export function Navbar() {
                     alt="logo"
                     width={100}
                     height={100}
-                    className="h-12 w-auto object-contain"
+                    className="h-28 sm:h-36 w-auto object-contain"
                 />
             </Link>
 

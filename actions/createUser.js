@@ -3,12 +3,24 @@
 import { db } from "@/db/drizzle";
 import { bookCons } from "@/db/schema";   // your Drizzle schema
 import { BookConsSchema } from "@/schema/BookConsSchema";
+import { eq } from "drizzle-orm";
 import otpGenerator from "otp-generator";
 
 export const createUser = async (data) => {
     try {
         // ✅ Validate incoming data with Zod
         const parsed = BookConsSchema.parse(data);
+
+        // ✅ Check if email already exists
+        const existing = await db
+            .select()
+            .from(bookCons)
+            .where(eq(bookCons.email, parsed.email))
+            .limit(1);
+
+        if (existing.length > 0) {
+            return { errors: { message: "Email already registered" }, data: null };
+        }
 
         const otp = otpGenerator.generate(6, {
             upperCaseAlphabets: false,

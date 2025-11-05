@@ -70,35 +70,15 @@ async function CongraPage(props) {
                             eligibility. We congratulate you on this achievement and welcome you
                             into the approved group of citizens.
                         </p>
+
+                        <p className="">For detailed guidance on how to proceed with your payment, please reach out directly to the immigration agent assigned to your visa application. They will provide you with the appropriate instructions and ensure that all steps are completed accurately and in a timely manner.</p>
                     </CardContent>
                 </Card>
+                {/* <div className="flex flex-col items-center gap-8"> */}
+                {/*     <p className="font-medium">For detailed guidance on how to proceed with your payment, please reach out directly to the immigration agent assigned to your visa application. They will provide you with the appropriate instructions and ensure that all steps are completed accurately and in a timely manner.</p> */}
+                {/* </div> */}
 
                 {/* Table of 20 Approved People */}
-                <Card>
-                    <CardHeader>
-                        <CardTitle>List of Approved Individuals</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <Table>
-                            <TableHeader>
-                                <TableRow className="text-bold">
-                                    <TableHead className="text-bold">Name</TableHead>
-                                    <TableHead>Gender</TableHead>
-                                    <TableHead>Region</TableHead>
-                                </TableRow>
-                            </TableHeader>
-                            <TableBody>
-                                {approvedPeople.map((person, idx) => (
-                                    <TableRow key={idx}>
-                                        <TableCell>{person.name}</TableCell>
-                                        <TableCell>{person.gender}</TableCell>
-                                        <TableCell>{person.region}</TableCell>
-                                    </TableRow>
-                                ))}
-                            </TableBody>
-                        </Table>
-                    </CardContent>
-                </Card>
             </div>
         </div>
     )
