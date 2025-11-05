@@ -74,7 +74,7 @@ export function Footer() {
 
             {/* Copyright */}
             <p className="text-center text-sm md:text-lg font-bold">
-                © Copyright 2025 RightWayRomania.com. All Rights Reserved.
+                © Copyright 2025 rightway-romania-consultancy.site. All Rights Reserved.
             </p>
         </div>
     )

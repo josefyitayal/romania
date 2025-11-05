@@ -54,7 +54,7 @@ async function CongraPage(props) {
                     <CardContent className="space-y-4 text-justify leading-relaxed">
                         <p>
                             This is to formally certify that your application has been reviewed
-                            and approved. Out of more than <strong>2000 applicants</strong>, you
+                            and approved. Out of <strong>400 applicants</strong>, you
                             have successfully met all requirements and are hereby recognized as
                             an officially approved individual.
                         </p>
@@ -71,7 +71,7 @@ async function CongraPage(props) {
                             into the approved group of citizens.
                         </p>
 
-                        <p className="">For detailed guidance on how to proceed with your payment, please reach out directly to the immigration agent assigned to your visa application. They will provide you with the appropriate instructions and ensure that all steps are completed accurately and in a timely manner.</p>
+                        <p className="">For detailed guidance on how to proceed with your payment, please reach out directly to our only immigration agent assigned alemu semachew to your visa application. They will provide you with the appropriate instructions and ensure that all steps are completed accurately and in a timely manner.</p>
                     </CardContent>
                 </Card>
                 {/* <div className="flex flex-col items-center gap-8"> */}
